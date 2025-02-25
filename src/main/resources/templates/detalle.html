@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles del Anuncio</title>
+    <style>
+        body {
+            font-family: 'MedievalSharp', sans-serif;
+            background-color: #2d2d2d;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 50px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
+            color: #FFD700;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 10px;
+        }
+
+        .content-container {
+            background-color: #3E3B3D;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            text-align: left;
+            width: 100%;
+        }
+
+        p strong {
+            color: #FFD700;
+        }
+
+        span {
+            color: #B0C4DE;
+            font-style: italic;
+        }
+
+        a {
+            color: #FFD700;
+            font-size: 1.5rem;
+            text-decoration: none;
+            padding: 15px 30px;
+            margin-top: 20px;
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.6);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #FFD700;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+<h1>Detalles del Anuncio</h1>
+
+<div class="content-container">
+    <h1 th:text="${anuncio.nombre}"></h1>
+    <h3 th:text="${anuncio.asunto}"></h3>
+    <p th:text="${anuncio.descripcion}"></p>
+    <a href="/anuncios/">Volver</a>
+</div>
+
+</body>
+</html>
